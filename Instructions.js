@@ -13,4 +13,4 @@ function drawInstructions() {
   text('GOOD LUCK RACER!', 75, 375);
 
   BackButton();
-};
+}
