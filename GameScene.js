@@ -1,7 +1,7 @@
 console.log("GameScene.js: line1 - loading");
-var SPEED = 1;
+var SPEED = 3;
 console.log("GameScene.js: post init, SPEED=" + SPEED);
-
+const goals2Win = 5;
 
 function drawGameScene() {
   console.log("GameScene.js: function drawGameScene()");
@@ -33,11 +33,11 @@ function drawGameScene() {
     this.img = loadImage('enemy.jpg');
   };
 
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 200; i++) {
     enemy.push(new Enemy(i * 125 + 300, random(20, 260)));
   }
 
-  for (var p = 0; p < 100; p++) {
+  for (var p = 0; p < 200; p++) {
     puck.push(new Puck(p * 125 + 250, random(20, 260)));
   }
 
@@ -88,7 +88,10 @@ function drawGameScene() {
   };
 
   draw = function() {
-    if (activeScreen === "Question") {
+   if (activeScreen === "Question"  || activeScreen === "Win" ) {
+//noLoop(); this stops everyting.
+    
+//    if (activeScreen != "Game") {
       //stop drawing for now
     } else {
       //ok, draw the game stuff 
@@ -133,17 +136,37 @@ function drawGameScene() {
 
       player.draw();
 
-      if (player.score >= 1) {
+      if (player.score >= 15 && Difficulty === 1) {
+        textSize(40);
+        text("Collect 15 pucks to shoot!", 20, 150);
         // NEED TO CHANGE currentScene to 8
         console.log("GameScene.js: function drawGameScene()....about to call drawQuestions();");
         drawQuestions();
       }
+      
+      if (player.score <= 2 && Difficulty === 2) {
+      textSize(40);
+      text("Collect 25 pucks to shoot!", 20, 150);
+      }
 
       if (Difficulty === 2) {
-        SPEED = 5;
+        SPEED = 6;
+        if (player.score >= 25) {
+        // NEED TO CHANGE currentScene to 8
+        drawQuestions();
       }
-      if (Goals === 5) {
+    }
+      if (Goals === goals2Win) {
         Win();
+        
+        //champions music
+        mySound4.setVolume(10);
+        mySound4.play();
+        
+        //stopping theme song, air horn and/or die music
+        mySound.stop();
+        mySound3.stop();
+        mySound1.stop();
       }
       if (EnemyGoals === 5) {
         Lose();
