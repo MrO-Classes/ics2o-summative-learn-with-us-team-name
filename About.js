@@ -1,4 +1,4 @@
-var drawAbout = function() {
+function drawAbout() {
   currentScene = 7;
   activeScreen = "About";
 
@@ -18,4 +18,4 @@ var drawAbout = function() {
   image(img_Learn, 5, 215, 150, 150);
   image(img_MrO, 345, 215, 150, 150);
   BackButton();
-};
+}
