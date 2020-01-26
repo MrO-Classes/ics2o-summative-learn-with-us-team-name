@@ -68,3 +68,4 @@ function Question() {
 
   this.correctPosition = round(random(1, 3));        
 }
+
