@@ -17,5 +17,4 @@ function drawMenuScreen() {
   SettingsButton();
   IntructionsButton();
   AboutButton();
-  drawMiniGameButton();
 }
