@@ -1,4 +1,5 @@
 function drawMenuScreen() {
+  console.log("menu screen");
   currentScene = 2;
   activeScreen = "Menu";
 
