@@ -1,5 +1,3 @@
-console.log("Settings.js: line1 - loading");
-
 var Difficulty = 1;
 const buttonEasy = 173;
 const buttonHard = 298;
@@ -24,13 +22,17 @@ var drawSettings = function() {
   textSize(20);
 
   text('Difficulty', 220, 265);
+  
+  
   if (Difficulty === 1) {
     //Easy
     currentButton = buttonEasy;
+    
   } else {
-    //hard
+    //med
     currentButton = buttonHard;
   }
+  
   fill(0);
   rect(currentButton, 280, 50, 25);
   fill(255, 0, 0);
@@ -38,4 +40,4 @@ var drawSettings = function() {
   text('Hard', 300, 300);
 
   BackButton();
-};
+}
