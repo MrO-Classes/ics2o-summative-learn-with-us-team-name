@@ -64,16 +64,6 @@ var drawVerifyButton = function() {
   text("Click to Verify", 190, 240);
 };
 
-//called from MenuScreen
-var drawMiniGameButton = function() {
-  //console.log("Button.js: var drawMiniGameButton = function() ");
-  fill(0);
-  rect(386, 345, 110, 50, 10);
-  fill(255, 255, 255);
-  textSize(20);
-  text("MINIGAME", 390, 378);
-};
-
 //called from QuestionScreen
 var NewQuestionButton = function() {
   //console.log("Button.js: var NewQuestionButton = function() ");
@@ -117,14 +107,3 @@ var drawButton = function(x, y, words) {
   // textSize(15)
   // text(words, x + 20, y + 12);
 }
-
-
-//called from minigame draw() function
-var drawMiniGameBackButton = function() {
-  //console.log("Button.js: var drawMiniGameBackButton = function()");
-  fill(0);
-  rect(430, 355, 70, 40, 10);
-  fill(255, 255, 255);
-  textSize(20);
-  text("BACK", 430, 355);
-};
