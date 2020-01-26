@@ -1,3 +1,4 @@
+//called from SplashScreen
 var NextButton = function() {
   fill(30, 40, 60);
   rect(440, 10, 50, 25, 10);
@@ -53,6 +54,7 @@ var BackButton = function() {
   text("BACK", 11, 32);
 };
 
+//called from GetReadyScreen
 var drawVerifyButton = function() {
   //console.log("Button.js: var drawVerifyButton = function()");
   fill(0);
@@ -79,7 +81,7 @@ var NewQuestionButton = function() {
   rect(300, 300, 165, 40, 5);
   fill(255, 255, 255);
   textSize(20);
-  text("New Question", 320, 312);
+  text("1 New Question", 315, 312);
 };
 
 
