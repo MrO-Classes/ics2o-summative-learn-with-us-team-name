@@ -1,5 +1,5 @@
 var changedQuestions = 0;
-const maxNewQuestions = 3;
+const maxNewQuestions = 1;
 
 var drawQuestions = function() {
   currentScene = 8;
