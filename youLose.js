@@ -1,6 +1,6 @@
 function Lose() {
   currentScene = 13;
-  activeScreen = "Loose";
+  activeScreen = "Lose";
   draw = function() {
     textSize(50);
     background(26, 226, 0);
